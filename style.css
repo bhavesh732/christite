@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Eczar&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Chivo&display=swap');
+@font-face {
+    font-family: "Lucky";
+    src: url(./fonts/LuckiestGuy.ttf);
+}
+
+* {
+    font-family: "Poppins";
+}
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #ffc002a4;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #ffc102;
+}
+
+html {
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #521a89;
+}
+
+.mainbodynomarg {
+    transition: 1s;
+}
+
+.mainbody {
+    margin-left: 20vw;
+    margin-right: -20vw;
+    border-left: 5px solid #310e55;
+    overflow-x: hidden;
+    transition: 1s;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    height: 91vh;
+    position: fixed;
+}
+
+.headerlogo {
+    font-family: "Rubik";
+    margin: 2vh 0vh;
+    padding: 0vh 2vh;
+    padding-right: 2.5vh;
+    background-image: linear-gradient(to right, #521a89, #521a89);
+    border-radius: 250px;
+    border: 5px solid white;
+    font-size: xx-large;
+    color: white;
+    font-weight: 900;
+    text-shadow: 3px 0px 0px white;
+    box-shadow: 5px 6px #0c1b33;
+    top: 0.5%;
+    left: 6%;
+    z-index: 3;
+    position: fixed;
+    float: left;
+    transition: 1s;
+}
+
+.headerlogomarg {
+    top: 1%;
+    margin-left: 20vw;
+    transition: 1s;
+}
+
+.headerlogo:hover {
+    background-image: linear-gradient(to left, #521a89, #521a89);
+    color: white;
+    transform: scale(1.2);
+    transition: 1s;
+    text-shadow: 3px 0px 0px white;
+}
+
+.margright {
+    width: 0%;
+    height: 0vh;
+    transition: 1s;
+}
+
+.fullwidth {
+    width: 20vw;
+    height: 100vh;
+    transition: 1s;
+    border: 1vw solid #310e55;
+    /* border-left: 15px solid #310e55; */
+    /* border-top: 15px solid #310e55;
+border-bottom: 15px solid #310e55;*/
+}
+
+.nowidthbutton button {
+    width: 0%;
+    height: 0vh;
+    transition: 1s;
+}
+
+.fullwidthbutton button {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+header .row {
+    width: 35%;
+}
+
+header .row:nth-child(1) {
+    position: absolute;
+}
+
+header .row {
+    width: 50%;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+nav ul {
+    padding-left: 0px;
+    margin: auto;
+}
+
+nav .container-fluid {
+    padding-left: 0px;
+}
+
+nav ul li button {
+    margin: 2vh;
+    padding: 1vh;
+    border: none;
+    border-radius: 0px;
+    text-decoration: none;
+    background-color: #310e55;
+    /* background-color: #4066e0; */
+    margin-left: 1vh;
+    color: white;
+}
+
+nav ul li button:hover {
+    box-shadow: 4px 7px #521a89;
+    transition: 1s;
+}
+
+nav span {
+    font-family: 'Lucky';
+}
+
+.navdisplay {
+    position: fixed;
+    top: 1%;
+    left: 0px;
+    padding: 1vh 2.5vh;
+    margin: 2vh;
+    border-radius: 200px;
+    border: none;
+    z-index: 2;
+    box-shadow: 5px 6px #0c1b33;
+    transition: 1s;
+}
+
+.navdisplay:before,
+.navdisplay div,
+.navdisplay:after {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    width: 4vh;
+    margin: 4px 0px;
+    background-color: #521a89;
+    transition: 1s;
+}
+
+.navdisplay:hover {
+    background-image: linear-gradient(to bottom, #dbfe87, #03b5aa);
+    transition: 1s;
+}
+
+.navhide {
+    position: fixed;
+    top: 1%;
+    left: 0px;
+    padding: 1vh 2.5vh;
+    margin: 2vh;
+    border-radius: 200px;
+    border: 5px solid white;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: 2;
+    background-color: #521a89;
+    box-shadow: 5px 6px #0c1b33;
+    margin-left: 20vw;
+    transition: 1s;
+}
+
+.navhide:before,
+.navhide div,
+.navhide:after {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    width: 4vh;
+    margin: 4px 0px;
+    background-color: white;
+    transition: 1s;
+}
+
+.navhide:hover {
+    background-image: linear-gradient(to top, #7a306c, #521a89);
+}
+
+.navhide:before {
+    transform: translateY(9px) rotate(135deg);
+    background-color: #DBFE87;
+}
+
+.navhide:after {
+    transform: translateY(-10px) rotate(-135deg);
+    background-color: #DBFE87;
+}
+
+.navhide div {
+    transform: scale(0);
+}
+
+a {
+    text-decoration: none;
+    color: #0c1b33;
+}
+
+a:hover {
+    text-decoration: none;
+    color: initial;
+}
+
+* {
+    margin: 0px;
+    outline: 0;
+}
+
+.intro {
+    height: 100vh;
+    padding: 0px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.intro .row:nth-child(1) {
+    background-color: #310e55;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+path {
+    fill: transparent;
+}
+
+text {
+    fill: #ffc102;
+}
+
+svg {
+    z-index: 2;
+}
+
+.row svg:nth-child(1) {
+    margin-right: -25vw;
+    margin-bottom: -60vw;
+    margin-left: 10vw;
+    height: 71vh;
+    width: 33vw;
+    letter-spacing: 1px;
+    font-family: 'Lucky';
+    font-size: 25px;
+}
+
+@keyframes svg1animate {
+    0% {
+        text-shadow: 0px 0px;
+    }
+    50% {
+        text-shadow: 4px 7px #0c1b33;
+    }
+    100% {
+        text-shadow: 0px 0px;
+    }
+}
+
+.svg1animate {
+    animation: svg1animate 1s linear infinite;
+}
+
+.introdiv {
+    font-size: x-large;
+    /* font-family: "Shrikhand"; */
+    font-family: "Lucky";
+    text-align: center;
+    color: #ffc102;
+    z-index: 2;
+    position: absolute;
+}
+
+.row .introdiv:nth-child(1) {
+    margin-left: -30vw;
+    margin-top: 20vh;
+}
+
+.row .introdiv:nth-child(2) {
+    margin-left: 30vw;
+    margin-top: 30vh;
+}
+
+.row .introdiv:nth-child(3) {
+    margin-left: -49vw;
+    margin-top: 45vh;
+}
+
+.row .introdiv:nth-child(4) {
+    margin-left: -30vw;
+    margin-top: 80vh;
+}
+
+.intro .row:nth-child(2) {
+    z-index: 0;
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.logo {
+    color: white;
+    font-family: "Lucky";
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 10vw;
+    margin: 0vh 30vw;
+    margin-top: 35vh;
+    margin-left: 27vw;
+    text-shadow: 2px 10px 0px #0c1b33;
+    /* -webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: #4d1981; */
+    /* transition: 1s; */
+}
+
+.logo span:nth-child(1) {
+    font-family: "Lucky";
+    text-shadow: 2px 10px 0px #0c1b33;
+}
+
+.logo span:nth-child(2) {
+    font-family: "Lucky";
+    color: #521a89;
+    text-shadow: 2px 10px 0px #0c1b33;
+    /* -webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: white; */
+}
+
+.tagline {
+    color: white;
+    font-family: "Lucky";
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-left: 27vw;
+    text-shadow: 2px 10px 0px #0c1b33;
+}
+
+@media screen and (max-width:1050px) {
+    .headerlogo {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .logo {
+        margin-top: 40vh;
+        margin-left: 53%;
+        margin-bottom: 0vw;
+    }
+    .headerlogo {
+        margin-left: 0vw;
+        left: 13%;
+    }
+    .headerlogomarg {
+        margin-left: 35vw;
+    }
+    .mainbody {
+        margin-right: -40vw;
+        margin-left: 40vw;
+    }
+    .navhide {
+        margin-left: 40vw;
+    }
+    .fullwidth {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:766px) {
+    .logo {
+        font-size: 60px;
+        margin: 11vw;
+        margin-top: 25vw;
+        margin-left: 11vh;
+        margin-bottom: 0vw;
+        font-weight: 900;
+    }
+    .tagline {
+        margin-top: 2vh;
+        font-size: medium;
+        margin-left: 10vh;
+        letter-spacing: 1px;
+    }
+    .headerlogo {
+        margin-left: 0vh;
+        left: 18%;
+    }
+    .headerlogomarg {
+        margin-left: 22vh;
+    }
+    nav {
+        width: 100%;
+    }
+    .fullwidth {
+        width: 100vw;
+    }
+    .mainbody {
+        margin-left: 100vw;
+        margin-right: -100vw;
+    }
+    .navdisplay {
+        padding: 1vh 2vh;
+    }
+    .navhide {
+        border-radius: 200px;
+        padding: 2vh;
+    }
+    header {
+        height: 100vh;
+    }
+    .headerlogo {
+        left: 12vh;
+        top: 0.5vh;
+    }
+    .headerlogomarg {
+        top: 15vh;
+        left: -3vh;
+    }
+    .logo {
+        margin-left: 6.9vh;
+        margin-top: 20vh;
+    }
+    .tagline {
+        margin-left: 13vw;
+    }
+}
+
+@media screen and (max-width:403px) {
+    .logo {
+        margin-left: 8vh;
+        font-size: 14vw;
+    }
+}
