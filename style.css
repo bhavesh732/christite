@@ -23,6 +23,10 @@
     user-select: none;
 }
 
+.row {
+    text-align: center;
+}
+
  ::-webkit-scrollbar {
     width: 10px;
 }
@@ -52,6 +56,7 @@ body {
 }
 
 .mainbodynomarg {
+    z-index: 1;
     transition: 1s;
 }
 
@@ -109,7 +114,7 @@ header {
 
 .margright {
     width: 0%;
-    height: 0vh;
+    height: 100vh;
     transition: 1s;
 }
 
@@ -126,12 +131,14 @@ border-bottom: 15px solid #310e55;*/
 .nowidthbutton button {
     width: 0%;
     height: 0vh;
+    padding: 0vh;
     transition: 1s;
 }
 
 .fullwidthbutton button {
     width: 100%;
     height: 100%;
+    padding: 1vh;
     transition: 1s;
 }
 
@@ -139,9 +146,10 @@ header .row {
     width: 35%;
 }
 
-header .row:nth-child(1) {
+
+/* header .row:nth-child(1) {
     position: absolute;
-}
+} */
 
 header .row {
     width: 50%;
@@ -176,6 +184,7 @@ nav ul li button {
     /* background-color: #4066e0; */
     margin-left: 1vh;
     color: white;
+    z-index: 0;
 }
 
 nav ul li button:hover {
@@ -289,14 +298,20 @@ a:hover {
 
 .row {
     margin: 0px;
+    height: 100%;
 }
 
 .intro .row:nth-child(1) {
     background-color: #310e55;
     width: 50%;
-    height: 100%;
     position: absolute;
     z-index: 1;
+}
+
+.intro .row:nth-child(2) {
+    z-index: 0;
+    margin-left: 50%;
+    width: 50%;
 }
 
 path {
@@ -368,13 +383,6 @@ svg {
     margin-top: 80vh;
 }
 
-.intro .row:nth-child(2) {
-    z-index: 0;
-    margin-left: 50%;
-    width: 50%;
-    height: 100%;
-}
-
 .logo {
     color: white;
     font-family: "Lucky";
@@ -382,7 +390,7 @@ svg {
     letter-spacing: 2px;
     font-size: 10vw;
     margin: 0vh 30vw;
-    margin-top: 35vh;
+    margin-top: 15vh;
     margin-left: 27vw;
     text-shadow: 2px 10px 0px #0c1b33;
     /* -webkit-text-stroke-width: 0.1px;
@@ -412,6 +420,16 @@ svg {
     text-shadow: 2px 10px 0px #0c1b33;
 }
 
+.loginform {
+    height: 40vh;
+    padding: 1vw;
+    margin: 2vw auto;
+    width: 50%;
+    background-color: white;
+    box-shadow: 5px 7px #0c1b33;
+    border-radius: 2px;
+}
+
 @media screen and (max-width:1050px) {
     .headerlogo {
         left: 10%;
@@ -420,7 +438,7 @@ svg {
 
 @media screen and (max-width:900px) {
     .logo {
-        margin-top: 40vh;
+        margin-top: 15vh;
         margin-left: 53%;
         margin-bottom: 0vw;
     }
@@ -444,8 +462,12 @@ svg {
 }
 
 @media screen and (max-width:800px) {
-    .showoverflow {
-        overflow-x: hidden;
+    .hideoverflow {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #310e55;
+        transition: 1s;
     }
     .logo {
         font-size: 60px;
@@ -471,12 +493,19 @@ svg {
     nav {
         width: 100%;
     }
+    .margright {
+        height: 100vh !important;
+    }
     .fullwidth {
-        width: 100vw;
+        width: 100%;
+        max-height: 100vh !important;
+        border: 10px solid #310e55;
     }
     .mainbody {
         margin-left: 100vw;
-        margin-right: -100vw;
+    }
+    .mainbodynomarg {
+        margin-right: 0px;
     }
     .navdisplay {
         padding: 1vh 2vh;
@@ -502,6 +531,9 @@ svg {
     }
     .tagline {
         margin-left: 13vw;
+    }
+    .intro {
+        height: 50vh;
     }
 }
 
