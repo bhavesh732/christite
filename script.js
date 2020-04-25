@@ -17,9 +17,26 @@ navbutton.addEventListener('click', () => {
 });
 
 const loginbutton = document.querySelector('.innerboundarybutton');
-const flipcard = document.querySelector('.flip-card-inner');
+const registerbutton = document.querySelector('.innerboundaryregister');
+const loginflipcard = document.querySelector('.loginform');
+const registerflipcard = document.querySelector('.registerform');
+const loginclosebutton = document.querySelector('.closebutton');
+const registerclosebutton = document.querySelector('.registerclosebutton');
 
 loginbutton.addEventListener("click", () => {
-    loginbutton.classList.toggle('closebutton');
-    flipcard.classList.toggle('rotate');
+    loginbutton.classList.toggle('emptyclass');
+    loginflipcard.classList.toggle('rotate');
+});
+
+registerbutton.addEventListener("click", () => {
+    registerbutton.classList.toggle('emptyclass');
+    registerflipcard.classList.toggle('rotate');
+});
+
+loginclosebutton.addEventListener("click", () => {
+    loginbutton.click();
+});
+
+registerclosebutton.addEventListener("click", () => {
+    registerbutton.click();
 });

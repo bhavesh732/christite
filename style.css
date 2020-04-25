@@ -516,15 +516,14 @@ svg {
 }
 
 .closebutton {
-    right: -10vw;
-    top: 20%;
-    height: 45px;
-    width: 45px;
-    border-radius: 200px;
-    position: absolute;
+    float: left;
+    text-align: center;
+    height: 40px;
+    width: 40px;
     background-color: white;
     margin-top: 0px;
     padding: 0px !important;
+    border: none;
 }
 
 .closebutton div {
@@ -540,7 +539,7 @@ svg {
     width: 30px;
     background-color: black;
     transition: 0.8s ease-in-out;
-    margin: 0px 7px;
+    margin: 0px 4px;
 }
 
 .closebutton:before {
@@ -557,15 +556,56 @@ svg {
     background-color: #310e55;
 }
 
+.registerclosebutton {
+    float: left;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    margin-top: 0px;
+    padding: 0px !important;
+    border: none;
+}
+
+.registerclosebutton div {
+    display: none;
+}
+
+.registerclosebutton:before,
+.registerclosebutton:after {
+    content: '';
+    border-radius: 3px;
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    transition: 0.8s ease-in-out;
+    margin: 0px 4px;
+}
+
+.registerclosebutton:before {
+    margin-top: -5px;
+}
+
+.registerclosebutton:before {
+    transform: translateY(5px) rotate(135deg);
+    background-color: #310e55;
+}
+
+.registerclosebutton:after {
+    transform: translateY(0px) rotate(-135deg);
+    background-color: #310e55;
+}
+
 .flip-card-inner {
     position: relative;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 1s;
     transform-style: preserve-3d;
 }
 
 .rotate {
-    transform: rotateY(180deg);
+    transform: rotateZ(360deg) rotateY(180deg);
 }
 
 .flip-card-front,
@@ -583,6 +623,10 @@ svg {
     color: rgb(255, 255, 255);
     transform: rotateY(180deg);
     padding: 5vw;
+}
+
+.backform {
+    padding: 0vh;
 }
 
 @media screen and (max-width:1050px) {
@@ -728,6 +772,8 @@ svg {
     .innerboundary {
         margin-left: auto;
         margin-right: auto;
+        margin-top: 16%;
+        padding: 2vh;
     }
     .tagline {
         margin-left: 13vw;
@@ -735,7 +781,7 @@ svg {
     .headerlogomarg {
         left: -3vh;
     }
-    .closebutton {
+    /* .closebutton {
         top: -12.8vh;
         right: 30%;
         left: 40%;
@@ -747,15 +793,13 @@ svg {
     .closebutton:before {
         width: 25px;
     }
-    /* .closebutton:before {
-        transform: scale(0);
-    } */
     .closebutton:after {
         transform: translateY(1px) translateX(-3px) rotate(-135deg);
     }
     .closebutton::before {
         transform: translateY(6px) translateX(-1px) rotate(135deg);
     }
+    */
 }
 
 @media screen and (max-width:403px) {
