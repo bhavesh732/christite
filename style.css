@@ -52,7 +52,7 @@ html {
 body {
     overflow: auto;
     overflow-x: hidden;
-    background-color: #521a89;
+    background-color: white;
 }
 
 .mainbodynomarg {
@@ -92,7 +92,7 @@ header {
     box-shadow: 5px 6px #0c1b33;
     top: 0.5%;
     left: 6%;
-    z-index: 3;
+    z-index: 5;
     position: fixed;
     float: left;
     transition: 1s;
@@ -204,7 +204,7 @@ nav span {
     margin: 2vh;
     border-radius: 200px;
     border: none;
-    z-index: 2;
+    z-index: 3;
     box-shadow: 5px 6px #0c1b33;
     transition: 1s;
 }
@@ -238,7 +238,7 @@ nav span {
     border-left: none;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    z-index: 2;
+    z-index: 5;
     background-color: #521a89;
     box-shadow: 5px 6px #0c1b33;
     margin-left: 20vw;
@@ -309,7 +309,7 @@ a:hover {
 }
 
 .intro .row:nth-child(2) {
-    z-index: 0;
+    z-index: 1;
     margin-left: 50%;
     width: 50%;
 }
@@ -389,9 +389,9 @@ svg {
     font-weight: 900;
     letter-spacing: 2px;
     font-size: 10vw;
-    margin: 0vh 30vw;
+    margin: 0vh auto;
+    margin-left: -1vw;
     margin-top: 15vh;
-    margin-left: 27vw;
     text-shadow: 2px 10px 0px #0c1b33;
     /* -webkit-text-stroke-width: 0.1px;
 -webkit-text-stroke-color: #4d1981; */
@@ -417,17 +417,172 @@ svg {
     font-weight: 900;
     letter-spacing: 2px;
     margin-left: 27vw;
+    width: fit-content;
+    margin-left: 27vw;
+    margin-right: auto;
     text-shadow: 2px 10px 0px #0c1b33;
+}
+
+.logocontainer {
+    text-align: center;
+    z-index: 2;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.logocontainer .col-sm-6 {
+    margin-top: 2vw;
 }
 
 .loginform {
     height: 40vh;
     padding: 1vw;
-    margin: 2vw auto;
     width: 50%;
     background-color: white;
     box-shadow: 5px 7px #0c1b33;
     border-radius: 2px;
+    margin: 2vw auto;
+    /* background-image: linear-gradient(
+    #03b5aa, white); */
+    font-family: "Lucky";
+    font-size: x-large;
+}
+
+.innerboundary {
+    margin-top: 10%;
+    margin-bottom: auto;
+    width: fit-content;
+    height: fit-content;
+    font-family: inherit;
+    font-size: xx-large;
+    color: #310e55;
+}
+
+.innerboundarybutton {
+    border: none;
+    background-color: #310e55;
+    color: white;
+    margin-top: 1vh;
+    box-shadow: 2px 2.8px #0c1b33;
+    transition: ease-in-out 0.8s;
+}
+
+.innerboundarybutton:hover {
+    box-shadow: 4px 7px #0c1b33;
+    transition: 0.2s;
+}
+
+.registerform {
+    height: 40vh;
+    padding: 1vw;
+    width: 50%;
+    background-color: #310e55;
+    box-shadow: 5px 7px #0c1b33;
+    border-radius: 2px;
+    margin: 2vw auto;
+    font-family: "Lucky";
+    /* background-image: linear-gradient(#03b5aa, white); */
+    font-size: x-large;
+}
+
+.registerform .innerboundary {
+    color: white;
+}
+
+.registerformmargin {
+    width: 50%;
+    bottom: 0px;
+    position: absolute;
+}
+
+.innerboundaryregister {
+    border: none;
+    background-color: white;
+    color: #310e55;
+    margin-top: 1vh;
+    box-shadow: 2px 2.8px #0c1b33;
+    transition: ease-in-out 0.2s;
+}
+
+.innerboundarybutton div,
+.innerboundaryregister div {
+    font-family: "Lucky";
+}
+
+.innerboundaryregister:hover {
+    box-shadow: 4px 7px #0c1b33;
+    transition: 0.2s;
+}
+
+.closebutton {
+    right: -10vw;
+    top: 20%;
+    height: 45px;
+    width: 45px;
+    border-radius: 200px;
+    position: absolute;
+    background-color: white;
+    margin-top: 0px;
+    padding: 0px !important;
+}
+
+.closebutton div {
+    display: none;
+}
+
+.closebutton:before,
+.closebutton:after {
+    content: '';
+    border-radius: 3px;
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    transition: 0.8s ease-in-out;
+    margin: 0px 7px;
+}
+
+.closebutton:before {
+    margin-top: -5px;
+}
+
+.closebutton:before {
+    transform: translateY(5px) rotate(135deg);
+    background-color: #310e55;
+}
+
+.closebutton:after {
+    transform: translateY(0px) rotate(-135deg);
+    background-color: #310e55;
+}
+
+.flip-card-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background-color: #3aafa9;
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    padding: 5vw;
 }
 
 @media screen and (max-width:1050px) {
@@ -439,7 +594,6 @@ svg {
 @media screen and (max-width:900px) {
     .logo {
         margin-top: 15vh;
-        margin-left: 53%;
         margin-bottom: 0vw;
     }
     .headerlogo {
@@ -454,7 +608,8 @@ svg {
         margin-left: 40vw;
     }
     .navhide {
-        margin-left: 40vw;
+        left: 45%;
+        right: 45%;
     }
     .fullwidth {
         width: 40vw;
@@ -471,16 +626,14 @@ svg {
     }
     .logo {
         font-size: 60px;
-        margin: 11vw;
+        margin: 0vw auto;
         margin-top: 25vw;
-        margin-left: 11vh;
-        margin-bottom: 0vw;
         font-weight: 900;
     }
     .tagline {
         margin-top: 2vh;
         font-size: medium;
-        margin-left: 10vh;
+        margin-left: 27vh;
         letter-spacing: 1px;
     }
     .headerlogo {
@@ -501,18 +654,22 @@ svg {
         max-height: 100vh !important;
         border: 10px solid #310e55;
     }
-    .mainbody {
-        margin-left: 100vw;
-    }
     .mainbodynomarg {
         margin-right: 0px;
+        visibility: visible;
+    }
+    .mainbody {
+        margin-left: 100vw;
+        visibility: hidden;
     }
     .navdisplay {
         padding: 1vh 2vh;
     }
     .navhide {
+        left: 20%;
         border-radius: 200px;
         padding: 2vh;
+        visibility: visible;
     }
     header {
         height: 100vh;
@@ -520,20 +677,84 @@ svg {
     .headerlogo {
         left: 12vh;
         top: 0.5vh;
+        visibility: visible;
     }
     .headerlogomarg {
         top: 15vh;
-        left: -3vh;
+        left: 20%;
     }
     .logo {
-        margin-left: 6.9vh;
         margin-top: 20vh;
+    }
+    .tagline {
+        margin-left: 30vw;
+    }
+    .intro {
+        height: 100vh;
+    }
+    .loginform {
+        width: 100%;
+    }
+    .registerform {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:766px) {
+    .intro {
+        height: 100vh;
+    }
+    .margtoplogocon {
+        margin-top: 2.5vh !important;
+    }
+    .logocontainer .col-sm-6 {
+        margin-top: 8.5vh;
+    }
+    .loginform,
+    .registerform {
+        display: table;
+    }
+    .innerboundary {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .loginform,
+    .registerform,
+    .innerboundary {
+        text-align: center;
+        font-size: 30px;
+        height: 40vh;
+    }
+    .innerboundary {
+        margin-left: auto;
+        margin-right: auto;
     }
     .tagline {
         margin-left: 13vw;
     }
-    .intro {
-        height: 50vh;
+    .headerlogomarg {
+        left: -3vh;
+    }
+    .closebutton {
+        top: -12.8vh;
+        right: 30%;
+        left: 40%;
+        height: 35px;
+        width: 35px;
+        margin: 0px;
+    }
+    .closebutton:after,
+    .closebutton:before {
+        width: 25px;
+    }
+    /* .closebutton:before {
+        transform: scale(0);
+    } */
+    .closebutton:after {
+        transform: translateY(1px) translateX(-3px) rotate(-135deg);
+    }
+    .closebutton::before {
+        transform: translateY(6px) translateX(-1px) rotate(135deg);
     }
 }
 

@@ -15,3 +15,11 @@ navbutton.addEventListener('click', () => {
     buttonwidth.classList.toggle('fullwidthbutton');
     overflow.classList.toggle('hideoverflow');
 });
+
+const loginbutton = document.querySelector('.innerboundarybutton');
+const flipcard = document.querySelector('.flip-card-inner');
+
+loginbutton.addEventListener("click", () => {
+    loginbutton.classList.toggle('closebutton');
+    flipcard.classList.toggle('rotate');
+});
