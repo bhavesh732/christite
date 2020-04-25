@@ -10,6 +10,9 @@
 
 * {
     font-family: "Poppins";
+}
+
+* {
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -516,7 +519,9 @@ svg {
 }
 
 .closebutton {
-    float: left;
+    left: 0px;
+    top: 0px;
+    position: absolute;
     text-align: center;
     height: 40px;
     width: 40px;
@@ -557,7 +562,9 @@ svg {
 }
 
 .registerclosebutton {
-    float: left;
+    left: 0px;
+    top: 0px;
+    position: absolute;
     text-align: center;
     height: 40px;
     width: 40px;
@@ -626,7 +633,76 @@ svg {
 }
 
 .backform {
-    padding: 0vh;
+    padding: 1vh;
+    display: table;
+    text-align: center;
+}
+
+.formdiv {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+input {
+    /* box-shadow: ; */
+    margin: 1vh;
+    font-size: large;
+    border: none;
+    width: 80%;
+    border-radius: 5px;
+    padding-left: 1vw;
+    color: black;
+}
+
+.submit {
+    width: 60%;
+    background-color: #310e55;
+    border: none;
+    font-size: large;
+    border-radius: 5px;
+    color: white;
+}
+
+.first {
+    display: block;
+}
+
+.second {
+    display: none;
+}
+
+.hrline {
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    line-height: 0.1em;
+    margin: 10px 10% 20px;
+}
+
+.hrline span {
+    padding: 0 10px;
+    background-color: #03b5aa;
+    font-size: small;
+}
+
+.continue div:nth-child(2) {
+    display: none;
+}
+
+.back {
+    top: 0px;
+    right: 0px;
+    width: fit-content;
+    position: absolute;
+    border-radius: 0px;
+}
+
+.back div:nth-child(1) {
+    display: none;
+}
+
+.back div:nth-child(2) {
+    display: block;
 }
 
 @media screen and (max-width:1050px) {

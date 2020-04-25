@@ -22,6 +22,9 @@ const loginflipcard = document.querySelector('.loginform');
 const registerflipcard = document.querySelector('.registerform');
 const loginclosebutton = document.querySelector('.closebutton');
 const registerclosebutton = document.querySelector('.registerclosebutton');
+const continuebutton = document.querySelector('.continue');
+const formcontinue = document.querySelector('.first');
+const form2continue = document.querySelector('.second');
 
 loginbutton.addEventListener("click", () => {
     loginbutton.classList.toggle('emptyclass');
@@ -39,4 +42,10 @@ loginclosebutton.addEventListener("click", () => {
 
 registerclosebutton.addEventListener("click", () => {
     registerbutton.click();
+});
+
+continuebutton.addEventListener("click", () => {
+    formcontinue.classList.toggle('second');
+    form2continue.classList.toggle('second');
+    continuebutton.classList.toggle('back')
 });
