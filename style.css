@@ -784,7 +784,7 @@ input {
         padding: 7.22px 14.44px;
     }
     .navhide {
-        left: 20%;
+        left: 22%;
         border-radius: 200px;
         padding: 2vh;
         visibility: visible;
@@ -799,7 +799,7 @@ input {
     }
     .headerlogomarg {
         top: 15vh;
-        left: 20%;
+        left: 22%;
     }
     .logo {
         margin-top: 20vh;
@@ -853,6 +853,6 @@ input {
         margin-left: 13vw;
     }
     .headerlogomarg {
-        left: -3vh;
+        left: -3%;
     }
 }
