@@ -9,7 +9,7 @@
 }
 
 * {
-    font-family: "Poppins";
+    font-family: "Lucky";
 }
 
 * {
@@ -82,9 +82,9 @@ header {
 
 .headerlogo {
     font-family: "Rubik";
-    margin: 2vh 0vh;
-    padding: 0vh 2vh;
-    padding-right: 2.5vh;
+    margin: 14.44px 0vh;
+    padding: 0vh 14.44px;
+    padding-right: 18.05px;
     background-image: linear-gradient(to right, #521a89, #521a89);
     border-radius: 250px;
     border: 5px solid white;
@@ -188,6 +188,7 @@ nav ul li button {
     margin-left: 1vh;
     color: white;
     z-index: 0;
+    letter-spacing: 1px;
 }
 
 nav ul li button:hover {
@@ -203,8 +204,8 @@ nav span {
     position: fixed;
     top: 1%;
     left: 0px;
-    padding: 1vh 2.5vh;
-    margin: 2vh;
+    padding: 7.22px 18.05px;
+    margin: 14.44px;
     border-radius: 200px;
     border: none;
     z-index: 3;
@@ -220,7 +221,7 @@ nav span {
     content: '';
     display: block;
     height: 5px;
-    width: 4vh;
+    width: 28.88px;
     margin: 4px 0px;
     background-color: #521a89;
     transition: 1s;
@@ -784,7 +785,7 @@ input {
         visibility: hidden;
     }
     .navdisplay {
-        padding: 1vh 2vh;
+        padding: 7.22px 14.44px;
     }
     .navhide {
         left: 20%;
@@ -857,31 +858,5 @@ input {
     }
     .headerlogomarg {
         left: -3vh;
-    }
-    /* .closebutton {
-        top: -12.8vh;
-        right: 30%;
-        left: 40%;
-        height: 35px;
-        width: 35px;
-        margin: 0px;
-    }
-    .closebutton:after,
-    .closebutton:before {
-        width: 25px;
-    }
-    .closebutton:after {
-        transform: translateY(1px) translateX(-3px) rotate(-135deg);
-    }
-    .closebutton::before {
-        transform: translateY(6px) translateX(-1px) rotate(135deg);
-    }
-    */
-}
-
-@media screen and (max-width:403px) {
-    .logo {
-        margin-left: 8vh;
-        font-size: 14vw;
     }
 }
