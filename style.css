@@ -210,6 +210,7 @@ nav span {
     z-index: 3;
     box-shadow: 5px 6px #0c1b33;
     transition: 1s;
+    background-color: white;
 }
 
 .navdisplay:before,
