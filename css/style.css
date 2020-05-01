@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Eczar&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Chivo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @font-face {
     font-family: "Lucky";
-    src: url(./fonts/LuckiestGuy.ttf);
+    src: url(../fonts/LuckiestGuy.ttf);
 }
 
 * {
@@ -72,12 +74,17 @@ body {
 }
 
 header {
-    text-align: center;
+    text-align: left;
     width: 100%;
-    height: 100%;
-    background-color: white;
-    height: 91vh;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0);
     position: fixed;
+    z-index: 10;
+}
+
+header .container-fluid .container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .headerlogo {
@@ -93,12 +100,12 @@ header {
     font-weight: 900;
     text-shadow: 3px 0px 0px white;
     box-shadow: 5px 6px #0c1b33;
-    top: 0.5%;
-    left: 6%;
-    z-index: 5;
-    position: fixed;
-    float: left;
     transition: 1s;
+    margin-right: auto;
+}
+
+.mr-auto {
+    margin-right: auto !important;
 }
 
 .headerlogomarg {
@@ -119,6 +126,7 @@ header {
     width: 0%;
     height: 100vh;
     transition: 1s;
+    padding: 0px;
 }
 
 .fullwidth {
@@ -126,6 +134,7 @@ header {
     height: 100vh;
     transition: 1s;
     border: 1vw solid #310e55;
+    padding: 1vw;
     /* border-left: 15px solid #310e55; */
     /* border-top: 15px solid #310e55;
 border-bottom: 15px solid #310e55;*/
@@ -145,50 +154,82 @@ border-bottom: 15px solid #310e55;*/
     transition: 1s;
 }
 
-header .row {
-    width: 35%;
-}
-
-
-/* header .row:nth-child(1) {
-    position: absolute;
-} */
-
-header .row {
-    width: 50%;
-}
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 nav {
     margin-top: auto;
     margin-bottom: auto;
+    width: fit-content;
+}
+
+.nav li a {
+    padding: 0px;
+}
+
+.nav li a:hover {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 nav ul {
     padding-left: 0px;
-    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav .container-fluid {
     padding-left: 0px;
 }
 
-nav ul li button {
+.navbefore.collapse {
+    display: none;
+}
+
+.duplicatenav {
+    display: block !important;
+}
+
+.navbefore button {
     margin: 2vh;
     padding: 1vh;
     border: none;
     border-radius: 0px;
     text-decoration: none;
-    background-color: #310e55;
-    /* background-color: #4066e0; */
-    margin-left: 1vh;
-    color: white;
-    z-index: 0;
+    /* background-color: #310e55; */
+    background-color: white;
+    color: #310e55;
+    z-index: 10;
     letter-spacing: 1px;
+    font-family: "Poppins";
+}
+
+.duplicatenav button {
+    margin: 2vh;
+    padding: 1vh;
+    border: none;
+    border-radius: 0px;
+    text-decoration: none;
+    /* background-color: #310e55; */
+    background-color: white;
+    color: #310e55;
+    z-index: 10;
+    letter-spacing: 1px;
+    font-family: "Poppins";
+}
+
+.navlater button {
+    margin: 2vh;
+    padding: 1vh;
+    border: none;
+    border-radius: 0px;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    z-index: 10;
+    letter-spacing: 1px;
+    font-family: "Poppins";
+}
+
+nav ul li:hover {
+    background-color: transparent !important;
 }
 
 nav ul li button:hover {
@@ -200,9 +241,15 @@ nav span {
     font-family: 'Lucky';
 }
 
+.hiddenul {
+    visibility: hidden;
+}
+
+.visibleul {
+    visibility: visible;
+}
+
 .navdisplay {
-    position: fixed;
-    top: 1%;
     left: 0px;
     padding: 7.22px 18.05px;
     margin: 14.44px;
@@ -211,7 +258,7 @@ nav span {
     z-index: 3;
     box-shadow: 5px 6px #0c1b33;
     transition: 1s;
-    background-color: white;
+    background-color: #521a89;
 }
 
 .navdisplay:before,
@@ -223,7 +270,7 @@ nav span {
     height: 5px;
     width: 28.88px;
     margin: 4px 0px;
-    background-color: #521a89;
+    background-color: white;
     transition: 1s;
 }
 
@@ -233,11 +280,10 @@ nav span {
 }
 
 .navhide {
-    position: fixed;
-    top: 1%;
     left: 0px;
     padding: 7.22px 18.05px;
     margin: 14.44px;
+    margin-top: 5px;
     border-radius: 200px;
     border: 5px solid white;
     border-left: none;
@@ -707,6 +753,56 @@ input {
     display: block;
 }
 
+.aboutdiv .container-fluid {
+    text-align: center;
+    background-color: #310e55;
+}
+
+.aboutdiv {
+    height: 100vh;
+    background-color: #310e55;
+}
+
+#about {
+    background-color: white;
+    text-align: center;
+    height: 90vh;
+    margin: 5vh auto;
+    display: table;
+}
+
+#about.container {
+    background-color: white;
+    /* box-shadow: ; */
+}
+
+#about div {
+    height: fit-content;
+    margin-bottom: auto;
+    margin-top: auto;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5vh;
+}
+
+#about h1 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 4vw;
+    color: #521a89;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    font-family: "Rubik";
+    /* text-shadow: 5px 0px black; */
+}
+
+#about p {
+    color: black;
+    font-family: "Open Sans";
+    font-size: medium;
+    margin-top: 10px;
+}
+
 @media screen and (max-width:1050px) {
     .headerlogo {
         left: 10%;
@@ -728,10 +824,6 @@ input {
     .mainbody {
         margin-right: -40vw;
         margin-left: 40vw;
-    }
-    .navhide {
-        left: 45%;
-        right: 45%;
     }
     .fullwidth {
         width: 40vw;
@@ -761,15 +853,8 @@ input {
     .headerlogomarg {
         margin-left: 22vh;
     }
-    nav {
-        width: 100%;
-    }
-    .margright {
-        height: 100vh !important;
-    }
     .fullwidth {
         width: 100%;
-        max-height: 100vh !important;
         border: 10px solid #310e55;
     }
     .mainbodynomarg {
@@ -782,15 +867,13 @@ input {
     }
     .navdisplay {
         padding: 7.22px 14.44px;
+        transform: scale(0.8);
     }
     .navhide {
-        left: 22%;
         border-radius: 200px;
-        padding: 2vh;
+        padding: 2vh 2.5vh;
         visibility: visible;
-    }
-    header {
-        height: 100vh;
+        transform: scale(0.8);
     }
     .headerlogo {
         left: 20vw;
@@ -816,11 +899,23 @@ input {
     .registerform {
         width: 100%;
     }
+    #about h1 {
+        font-size: xxx-large;
+    }
 }
 
 @media screen and (max-width:766px) {
+    .headerlogo {
+        margin-left: 15px;
+    }
     .intro {
         height: 123vh;
+    }
+    .navbefore.collapse {
+        display: block;
+    }
+    .duplicatenav.collapse {
+        display: none !important;
     }
     .margtoplogocon {
         margin-top: 2.5vh !important;
@@ -852,7 +947,46 @@ input {
     .tagline {
         margin-left: 13vw;
     }
-    .headerlogomarg {
-        left: -3%;
+    nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+        text-align: center;
+        background-color: #310e55;
+    }
+    .navbar-collapse {
+        border: none;
+        box-shadow: none;
+    }
+    header .container-fluid,
+    header.container-fluid {
+        padding: 0px;
+    }
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header {
+        margin: 0px;
+    }
+    .navdisplay {
+        margin-right: 15px;
+    }
+    .navbar-nav {
+        margin: auto 0px;
+    }
+    .ul {
+        display: none;
+    }
+    .displayul {
+        display: block;
+    }
+    .bgcolor {
+        background-color: #310e55;
+        border: 5px solid white;
+        height: 100vh;
+    }
+    #about h1 {
+        font-size: xx-large;
     }
 }

@@ -5,39 +5,21 @@
     <title>Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </head>
 
-<body class="showoverflow">
-    <header class=" container-fluid margright" style="position: fixed;">
-        <nav style=" width: 100%; ">
-            <!-- <span>
-                We Know You Are No Dora But You Can Still Explore.
-            </span> -->
-            <ul type="none" class="container-fluid nowidthbutton hiddenul">
-                <li><a><button>About Us</button></a></li>
-                <li><a><button>Forum</button></a></li>
-                <li><a><button>Christ Blogs</button></a></li>
-                <li><a><button>Academics</button></a></li>
-            </ul>
-        </nav>
-    </header>
+<body>
 
-    <div class="mainbodynomarg " style="background-color: white; ">
-        <button class="navdisplay "><div></div></button>
-
-        <a><button class="headerlogo ">C</button></a>
-
-        <div class="container-fluid intro " style="position: relative; ">
-            <div class="row ">
-            </div>
-            <div class="row " style="background-color: white; ">
-                <!-- <svg viewBox="0 0 500 500 "> -->
-                <!-- <path id="curve " d="M0,50 a1,1 0 0,0 100,0 "/> -->
-                <!-- <path id="curve " d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97 "  />
+    <div class="container-fluid intro " style="position: relative; ">
+        <div class="row ">
+        </div>
+        <div class="row " style="background-color: white; ">
+            <!-- <svg viewBox="0 0 500 500 "> -->
+            <!-- <path id="curve " d="M0,50 a1,1 0 0,0 100,0 "/> -->
+            <!-- <path id="curve " d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97 "  />
                         <text width="500 ">
                             <textPath xlink:href="#curve " class="svg1animate " style="font-family: 'Lucky'; ">
                                 Anna! Namge Kannada Gottilla!!
@@ -51,66 +33,109 @@
                         <div class="introdiv ">Bhai Shaam ko Kormangala<br> chalte hai!!!</div>
                         <div class="introdiv ">Yeno? Yen Madtidiya???</div>
                     </div> -->
-            </div>
-            <div class="logocontainer">
-                <h1 class="logo">CHRI<span>S</span><span>TITE</span></h1>
-                <h2 class="tagline">...For a christite!</h2>
-                <!-- <div class="loginform "></div> -->
-                <div class="col-sm-6">
-                    <div class="flip-card">
-                        <div class="loginform flip-card-inner">
-                            <div class="flip-card-front innerboundary">
-                                To get back to your full blown christ experience! <br><button class="innerboundarybutton"><div>Login!</div></button>
-                            </div>
-                            <div class="flip-card-back backform">
-                                <button class="closebutton"></button>
-                                <form method="post" class="formdiv">
-                                    <input type="text" placeholder="Username or Email">
-                                    <input type="password" placeholder="Password">
-                                    <input type="submit" value="Login" class="submit">
-                                    <div class="hrline"><span>or</span></div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 margtoplogocon">
-                    <div class="flip-card">
-                        <div class="registerform flip-card-inner">
-                            <div class="flip-card-front innerboundary">
-                                To start your full blown christ experience!<br><button class="innerboundaryregister">Register!</button>
-                            </div>
-                            <div class="flip-card-back backform">
-                                <button class="registerclosebutton"></button>
-                                <div class="formdiv">
-                                    <form method="post">
-                                        <div class="first">
-                                            <input type="text" placeholder="Full Name">
-                                            <input type="text" placeholder="Username" style="width: 40%;"> <input type="text" placeholder="Class" style="width: 40%;">
-                                            <input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="second">
-                                            <input type="text" placeholder="Phone Number">
-                                            <input type="password" placeholder="Password">
-                                            <input type="password" placeholder="O-T-P">
-                                            <input type="submit" class="submit" value="Register">
-                                        </div>
-                                    </form>
-                                    <button class="submit continue"><div>Continue</div><div>Back</div></button>
-                                    <div class="hrline"><span>or</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+        <div class="logocontainer">
 
-        <div class="container ">
+            <header class="container-fluid empty" id="header">
+                <div class="container-fluid">
+                    <div class="container">
+                        <a class="mr-auto"><button class="headerlogo">C</button></a>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle navdisplay" data-toggle="collapse" data-target="#myNavbar"><div></div></button>
+                        </div>
+                        <nav class="collapse navbar-collapse duplicatenav" id="">
+                            <ul type="none" class="nav navbar-nav ">
+                                <li><a href="#"><button>Home</button></a></li>
+                                <li><a href="#about" onclick="navhide()"><button>About Us</button></a></li>
+                                <li><a><button>Forum</button></a></li>
+                                <li><a><button>Christ Blogs</button></a></li>
+                                <li><a><button>Academics</button></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <nav class="collapse navbar-collapse navbefore" id="myNavbar">
+                        <ul type="none" class="nav navbar-nav ul">
+                            <li><a href="#"><button>Home</button></a></li>
+                            <li><a href="#about" onclick="navhide()"><button>About Us</button></a></li>
+                            <li><a><button>Forum</button></a></li>
+                            <li><a><button>Christ Blogs</button></a></li>
+                            <li><a><button>Academics</button></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <h1 class="logo">CHRI<span>S</span><span>TITE</span></h1>
+            <h2 class="tagline">For a christite!</h2>
+            <!-- <div class="loginform "></div> -->
+            <div class="col-sm-6">
+                <div class="flip-card">
+                    <div class="loginform flip-card-inner">
+                        <div class="flip-card-front innerboundary">
+                            To get back to your full blown christ experience! <br><button class="innerboundarybutton"><div>Login!</div></button>
+                        </div>
+                        <div class="flip-card-back backform">
+                            <button class="closebutton"></button>
+                            <form method="post" class="formdiv">
+                                <input type="text" placeholder="Username or Email">
+                                <input type="password" placeholder="Password">
+                                <input type="submit" value="Login" class="submit">
+                                <div class="hrline"><span>or</span></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 margtoplogocon">
+                <div class="flip-card">
+                    <div class="registerform flip-card-inner">
+                        <div class="flip-card-front innerboundary">
+                            To start your full blown christ experience!<br><button class="innerboundaryregister">Register!</button>
+                        </div>
+                        <div class="flip-card-back backform">
+                            <button class="registerclosebutton"></button>
+                            <div class="formdiv">
+                                <form method="post">
+                                    <div class="first">
+                                        <input type="text" placeholder="Full Name">
+                                        <input type="text" placeholder="Username" style="width: 40%;"> <input type="text" placeholder="Class" style="width: 40%;">
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                    <div class="second">
+                                        <input type="text" placeholder="Phone Number">
+                                        <input type="password" placeholder="Password">
+                                        <input type="password" placeholder="O-T-P">
+                                        <input type="submit" class="submit" value="Register">
+                                    </div>
+                                </form>
+                                <button class="submit continue"><div>Continue</div><div>Back</div></button>
+                                <div class="hrline"><span>or</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="aboutdiv">
+        <div class="container-fluid">
+            <div class="container" id="about">
+                <div>
+                    <h1>ABOUT US</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, maiores iste porro repellendus unde molestias temporibus facere veritatis perspiciatis ea dolore maxime placeat nisi aliquam rerum delectus sapiente? Non, culpa.</p>
+                </div>
+            </div>
+        </div>
 
-    <script src="script.js "></script>
+        <div class="container-fluid">
+            <div class="container" id="aboutpara">
+            </div>
+        </div>
+
+    </div>
+    <!-- </div> -->
+
+    <script src="./js/script.js "></script>
 </body>
 
 </html>

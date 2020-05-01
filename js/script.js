@@ -1,19 +1,22 @@
 const navbutton = document.querySelector('.navdisplay');
-const mainbody = document.querySelector('.mainbodynomarg');
-const navwidth = document.querySelector('.margright');
-const headerlogomarg = document.querySelector('.headerlogo');
-const buttonwidth = document.querySelector('.nowidthbutton');
-const ul = document.querySelector('.hiddenul');
-const overflow = document.querySelector('.showoverflow');
+// const mainbody = document.querySelector('.mainbodynomarg');
+// const navwidth = document.querySelector('.margright');
+// const headerlogomarg = document.querySelector('.headerlogo');
+const navdisplay = document.querySelector('.navbefore');
+// const buttonwidth = document.querySelector('.nowidthbutton');
+const ul = document.querySelector('.ul');
+// const overflow = document.querySelector('.showoverflow');
+const bgcol = document.querySelector('.empty');
 
 navbutton.addEventListener('click', () => {
     navbutton.classList.toggle('navhide');
-    mainbody.classList.toggle('mainbody');
-    navwidth.classList.toggle('fullwidth');
-    headerlogomarg.classList.toggle('headerlogomarg');
-    ul.classList.toggle('visibleul');
-    buttonwidth.classList.toggle('fullwidthbutton');
-    overflow.classList.toggle('hideoverflow');
+    // navwidth.classList.toggle('fullwidth');
+    // headerlogomarg.classList.toggle('headerlogomarg');
+    ul.classList.toggle('displayul');
+    bgcol.classList.toggle('bgcolor');
+    // buttonwidth.classList.toggle('fullwidthbutton');
+    // overflow.classList.toggle('hideoverflow');
+    navdisplay.classList.toggle('navbeforedisplay');
 });
 
 const loginbutton = document.querySelector('.innerboundarybutton');
@@ -49,3 +52,24 @@ continuebutton.addEventListener("click", () => {
     form2continue.classList.toggle('second');
     continuebutton.classList.toggle('back')
 });
+
+function navhide() {
+    navbutton.click();
+}
+
+window.onscroll = function() {
+    scrollfunction();
+}
+
+var header = document.getElementById("header");
+const nav = document.querySelector('.nav');
+
+function scrollfunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        header.style.backgroundColor = "#310e55";
+        nav.className = 'navlater';
+    } else {
+        header.style.backgroundColor = "rgba(0,0,0,0)";
+        nav.className = 'nav';
+    }
+}
