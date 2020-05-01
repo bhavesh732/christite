@@ -982,7 +982,7 @@ input {
         display: block;
     }
     .bgcolor {
-        background-color: #310e55;
+        background-color: #310e55!important;
         border: 5px solid white;
         height: 100vh;
     }
