@@ -261,6 +261,17 @@ nav span {
     background-color: #521a89;
 }
 
+.navdisplaybg {
+    left: 0px;
+    padding: 7.22px 18.05px;
+    margin: 14.44px;
+    border-radius: 200px;
+    border: none;
+    z-index: 3;
+    box-shadow: 5px 6px #0c1b33;
+    background-color: white;
+}
+
 .navdisplay:before,
 .navdisplay div,
 .navdisplay:after {
@@ -274,9 +285,16 @@ nav span {
     transition: 1s;
 }
 
-.navdisplay:hover {
-    background-image: linear-gradient(to bottom, #dbfe87, #03b5aa);
-    transition: 1s;
+.navdisplaybg:before,
+.navdisplaybg div,
+.navdisplaybg:after {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    width: 28.88px;
+    margin: 4px 0px;
+    background-color: #310e55;
 }
 
 .navhide {
@@ -287,8 +305,6 @@ nav span {
     border-radius: 200px;
     border: 5px solid white;
     border-left: none;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     z-index: 5;
     background-color: #521a89;
     box-shadow: 5px 6px #0c1b33;
@@ -307,10 +323,6 @@ nav span {
     margin: 4px 0px;
     background-color: white;
     transition: 1s;
-}
-
-.navhide:hover {
-    background-image: linear-gradient(to top, #7a306c, #521a89);
 }
 
 .navhide:before {
@@ -495,7 +507,7 @@ svg {
     border-radius: 2px;
     margin: 2vw auto;
     /* background-image: linear-gradient(
-    #03b5aa, white); */
+#03b5aa, white); */
     font-family: "Lucky";
     font-size: x-large;
 }
@@ -832,11 +844,7 @@ input {
 
 @media screen and (max-width:800px) {
     .hideoverflow {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        background-color: #310e55;
-        transition: 1s;
+        overflow-y: hidden;
     }
     .logo {
         font-size: 60px;
@@ -867,13 +875,14 @@ input {
     }
     .navdisplay {
         padding: 7.22px 14.44px;
-        transform: scale(0.8);
+        transform: scale(1);
     }
     .navhide {
         border-radius: 200px;
         padding: 2vh 2.5vh;
         visibility: visible;
         transform: scale(0.8);
+        border-left: 5px solid white;
     }
     .headerlogo {
         left: 20vw;
@@ -980,6 +989,9 @@ input {
     }
     .displayul {
         display: block;
+        margin-top: 15vh;
+        margin-bottom: auto;
+        height: fit-content;
     }
     .bgcolor {
         background-color: #310e55!important;

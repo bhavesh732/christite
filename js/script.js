@@ -5,7 +5,7 @@ const navbutton = document.querySelector('.navdisplay');
 const navdisplay = document.querySelector('.navbefore');
 // const buttonwidth = document.querySelector('.nowidthbutton');
 const ul = document.querySelector('.ul');
-// const overflow = document.querySelector('.showoverflow');
+const overflow = document.querySelector('.showoverflow');
 const bgcol = document.querySelector('.empty');
 
 navbutton.addEventListener('click', () => {
@@ -15,7 +15,7 @@ navbutton.addEventListener('click', () => {
     ul.classList.toggle('displayul');
     bgcol.classList.toggle('bgcolor');
     // buttonwidth.classList.toggle('fullwidthbutton');
-    // overflow.classList.toggle('hideoverflow');
+    overflow.classList.toggle('hideoverflow');
     navdisplay.classList.toggle('navbeforedisplay');
 });
 
@@ -63,13 +63,16 @@ window.onscroll = function() {
 
 var header = document.getElementById("header");
 const nav = document.querySelector('.nav');
+const navbutton2 = document.getElementById('navbutton');
 
 function scrollfunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         header.style.backgroundColor = "#310e55";
         nav.className = 'navlater';
+        navbutton2.className = 'navdisplaybg';
     } else {
         header.style.backgroundColor = "rgba(0,0,0,0)";
         nav.className = 'nav';
+        navbutton2.className = 'navdisplay';
     }
 }
