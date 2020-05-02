@@ -772,7 +772,7 @@ input {
     /* box-shadow: ; */
 }
 
-#about div {
+#about .maindiv {
     height: fit-content;
     margin-bottom: auto;
     margin-top: auto;
@@ -797,6 +797,15 @@ input {
     font-family: "Open Sans";
     font-size: medium;
     margin-top: 10px;
+}
+
+.motto {
+    font-family: 'Roboto';
+    font-size: x-large;
+    font-weight: 900;
+    margin-top: 2vh;
+    text-align: center;
+    font-style: italic;
 }
 
 .nav-a:after {
@@ -994,7 +1003,7 @@ input {
     .navbar-collapse ul {
         margin-top: 10vh;
     }
-    #about div {
+    #about .maindiv {
         padding: 5vh 0vh;
     }
     .nav-a:after {
