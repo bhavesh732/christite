@@ -845,9 +845,24 @@ input {
     padding: 5px;
 }
 
-@media screen and (max-width:1050px) {
-    .headerlogo {
-        left: 10%;
+@media screen and (max-width:1024px) {
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -30px;
+    }
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -30px;
+    }
+    .glyphicon-chevron-left:before,
+    .glyphicon-chevron-right:before {
+        color: white;
+        background-color: #310e55;
+        border-radius: 500px;
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+    }
+    .container-fluid.item.active {
+        padding: 0px 15px;
     }
 }
 
