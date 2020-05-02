@@ -179,29 +179,7 @@ nav .container-fluid {
     padding-left: 0px;
 }
 
-.navbefore.collapse {
-    display: none;
-}
-
-.duplicatenav {
-    display: block !important;
-}
-
-.navbefore button {
-    margin: 2vh;
-    padding: 1vh;
-    border: none;
-    border-radius: 0px;
-    text-decoration: none;
-    /* background-color: #310e55; */
-    background-color: white;
-    color: #310e55;
-    z-index: 10;
-    letter-spacing: 1px;
-    font-family: "Poppins";
-}
-
-.duplicatenav button {
+.nav button {
     margin: 2vh;
     padding: 1vh;
     border: none;
@@ -259,6 +237,7 @@ nav span {
     box-shadow: 5px 6px #0c1b33;
     transition: 1s;
     background-color: #521a89;
+    display: none;
 }
 
 .navdisplaybg {
@@ -270,6 +249,7 @@ nav span {
     z-index: 3;
     box-shadow: 5px 6px #0c1b33;
     background-color: white;
+    display: none;
 }
 
 .navdisplay:before,
@@ -677,12 +657,15 @@ svg {
 
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     backface-visibility: hidden;
+}
+
+.flip-card-back {
+    position: absolute;
 }
 
 .flip-card-back {
@@ -768,6 +751,7 @@ input {
 .aboutdiv .container-fluid {
     text-align: center;
     background-color: #310e55;
+    padding: 0px;
 }
 
 .aboutdiv {
@@ -815,6 +799,17 @@ input {
     margin-top: 10px;
 }
 
+.nav-a:after {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    width: 80%;
+    margin: 4px 10%;
+    background-color: white;
+    transition: 1s;
+}
+
 @media screen and (max-width:1050px) {
     .headerlogo {
         left: 10%;
@@ -847,15 +842,15 @@ input {
         overflow-y: hidden;
     }
     .logo {
-        font-size: 60px;
+        font-size: 120px;
         margin: 0vw auto;
-        margin-top: 25vw;
+        margin-top: 20vh;
         font-weight: 900;
     }
     .tagline {
         margin-top: 2vh;
-        font-size: medium;
-        margin-left: 27vh;
+        font-size: x-large;
+        margin-left: 20vh;
         letter-spacing: 1px;
     }
     .headerlogomarg {
@@ -893,12 +888,6 @@ input {
         top: 15vh;
         left: 22%;
     }
-    .logo {
-        margin-top: 20vh;
-    }
-    .tagline {
-        margin-left: 30vw;
-    }
     .intro {
         height: 100vh;
     }
@@ -914,17 +903,17 @@ input {
 }
 
 @media screen and (max-width:766px) {
+    .logo {
+        font-size: 60px;
+    }
+    .tagline {
+        font-size: medium;
+    }
     .headerlogo {
         margin-left: 15px;
     }
     .intro {
         height: 123vh;
-    }
-    .navbefore.collapse {
-        display: block;
-    }
-    .duplicatenav.collapse {
-        display: none !important;
     }
     .margtoplogocon {
         margin-top: 2.5vh !important;
@@ -939,19 +928,13 @@ input {
     .innerboundary {
         display: table-cell;
         vertical-align: middle;
+        height: fit-content;
     }
     .loginform,
     .registerform,
     .innerboundary {
         text-align: center;
         font-size: 30px;
-        height: 40vh;
-    }
-    .innerboundary {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 16%;
-        padding: 2vh;
     }
     .tagline {
         margin-left: 13vw;
@@ -974,12 +957,16 @@ input {
     header.container-fluid {
         padding: 0px;
     }
-    .container-fluid>.navbar-collapse,
-    .container-fluid>.navbar-header {
+    .container>.navbar-collapse,
+    .container>.navbar-header {
         margin: 0px;
     }
     .navdisplay {
         margin-right: 15px;
+        display: block;
+    }
+    .navdisplaybg {
+        display: block;
     }
     .navbar-nav {
         margin: auto 0px;
@@ -1000,5 +987,25 @@ input {
     }
     #about h1 {
         font-size: xx-large;
+    }
+    header .container-fluid .container {
+        padding: 0px;
+    }
+    .navbar-collapse ul {
+        margin-top: 10vh;
+    }
+    #about div {
+        padding: 5vh 0vh;
+    }
+    .nav-a:after {
+        width: 30%;
+        margin: auto 35%;
+    }
+    .nav button {
+        background-color: transparent;
+        color: white;
+    }
+    nav ul li button:hover {
+        box-shadow: none;
     }
 }

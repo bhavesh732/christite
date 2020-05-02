@@ -1,22 +1,11 @@
 const navbutton = document.querySelector('.navdisplay');
-// const mainbody = document.querySelector('.mainbodynomarg');
-// const navwidth = document.querySelector('.margright');
-// const headerlogomarg = document.querySelector('.headerlogo');
-const navdisplay = document.querySelector('.navbefore');
-// const buttonwidth = document.querySelector('.nowidthbutton');
-const ul = document.querySelector('.ul');
 const overflow = document.querySelector('.showoverflow');
 const bgcol = document.querySelector('.empty');
 
 navbutton.addEventListener('click', () => {
     navbutton.classList.toggle('navhide');
-    // navwidth.classList.toggle('fullwidth');
-    // headerlogomarg.classList.toggle('headerlogomarg');
-    ul.classList.toggle('displayul');
     bgcol.classList.toggle('bgcolor');
-    // buttonwidth.classList.toggle('fullwidthbutton');
     overflow.classList.toggle('hideoverflow');
-    navdisplay.classList.toggle('navbeforedisplay');
 });
 
 const loginbutton = document.querySelector('.innerboundarybutton');
@@ -53,8 +42,11 @@ continuebutton.addEventListener("click", () => {
     continuebutton.classList.toggle('back')
 });
 
-function navhide() {
-    navbutton.click();
+var mq = window.matchMedia("(max-width: 766px)");
+if (mq.matches) {
+    function navhide() {
+        navbutton.click();
+    }
 }
 
 window.onscroll = function() {
@@ -68,11 +60,20 @@ const navbutton2 = document.getElementById('navbutton');
 function scrollfunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         header.style.backgroundColor = "#310e55";
-        nav.className = 'navlater';
         navbutton2.className = 'navdisplaybg';
+        nav.className = 'navlater';
     } else {
         header.style.backgroundColor = "rgba(0,0,0,0)";
-        nav.className = 'nav';
         navbutton2.className = 'navdisplay';
+        nav.className = 'nav';
     }
+}
+
+var links = document.getElementsByClassName('butt');
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function() {
+        var active = document.getElementsByClassName('nav-a');
+        active[0].className = active[0].className.replace(" nav-a", "");
+        this.className += " nav-a";
+    });
 }
