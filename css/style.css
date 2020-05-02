@@ -443,13 +443,11 @@ svg {
 
 .logo span:nth-child(1) {
     font-family: "Lucky";
-    text-shadow: 2px 10px 0px #0c1b33;
 }
 
 .logo span:nth-child(2) {
     font-family: "Lucky";
     color: #521a89;
-    text-shadow: 2px 10px 0px #0c1b33;
     /* -webkit-text-stroke-width: 0.1px;
 -webkit-text-stroke-color: white; */
 }
@@ -483,7 +481,7 @@ svg {
     padding: 1vw;
     width: 50%;
     background-color: white;
-    box-shadow: 5px 7px #0c1b33;
+    /* box-shadow: 5px 7px #0c1b33; */
     border-radius: 2px;
     margin: 2vw auto;
     /* background-image: linear-gradient(
@@ -521,7 +519,7 @@ svg {
     padding: 1vw;
     width: 50%;
     background-color: #310e55;
-    box-shadow: 5px 7px #0c1b33;
+    /* box-shadow: 5px 7px #0c1b33; */
     border-radius: 2px;
     margin: 2vw auto;
     font-family: "Lucky";
@@ -803,7 +801,7 @@ input {
     font-family: 'Roboto';
     font-size: x-large;
     font-weight: 900;
-    margin-top: 2vh;
+    margin: 2vh 0vh;
     text-align: center;
     font-style: italic;
 }
