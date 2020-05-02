@@ -51,11 +51,34 @@ if (mq.matches) {
 
 window.onscroll = function() {
     scrollfunction();
+    hidefunction();
 }
 
 var header = document.getElementById("header");
 const nav = document.querySelector('.nav');
 const navbutton2 = document.getElementById('navbutton');
+
+
+var links = document.getElementsByClassName('butt');
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function() {
+        var active = document.getElementsByClassName('nav-a');
+        active[0].className = active[0].className.replace(" nav-a", "");
+        this.className += " nav-a";
+    });
+}
+
+var prevScrollpos = window.pageYOffset;
+
+function hidefunction() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+    } else {
+        document.getElementById("header").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
 
 function scrollfunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -67,13 +90,4 @@ function scrollfunction() {
         navbutton2.className = 'navdisplay';
         nav.className = 'nav';
     }
-}
-
-var links = document.getElementsByClassName('butt');
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", function() {
-        var active = document.getElementsByClassName('nav-a');
-        active[0].className = active[0].className.replace(" nav-a", "");
-        this.className += " nav-a";
-    });
 }

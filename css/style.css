@@ -82,6 +82,11 @@ header {
     z-index: 10;
 }
 
+#header {
+    top: 0;
+    transition: top 0.3s;
+}
+
 header .container-fluid .container {
     display: flex;
     flex-wrap: wrap;
@@ -815,6 +820,29 @@ input {
     margin: 4px 10%;
     background-color: white;
     transition: 1s;
+}
+
+.no-background.left,
+.no-background.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.carousel-control .glyphicon-chevron-left {
+    margin-left: -40px;
+}
+
+.carousel-control .glyphicon-chevron-right {
+    margin-right: -40px;
+}
+
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before {
+    color: #0c1b33;
+    background-color: white;
+    border-radius: 500px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
 }
 
 @media screen and (max-width:1050px) {
