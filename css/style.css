@@ -762,25 +762,29 @@ input {
     background-color: #310e55;
 }
 
-#about {
+#about,
+#featurescard1 {
     background-color: white;
     text-align: center;
     height: 90vh;
     margin: 5vh auto;
-    display: table;
 }
 
-#about.container {
+#about.container,
+#featurescard1.container {
     background-color: white;
     /* box-shadow: ; */
+}
+
+#about .vertalign {
+    height: 100%;
+    display: flex;
 }
 
 #about .maindiv {
     height: fit-content;
     margin-bottom: auto;
     margin-top: auto;
-    display: table-cell;
-    vertical-align: middle;
     padding: 5vh;
 }
 
@@ -843,6 +847,34 @@ input {
     height: 30px;
     width: 30px;
     padding: 5px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featurescard {
+    height: 97%;
+    margin: 1%;
+    margin-bottom: 2%;
+    background-color: #310e55;
+    padding: 0px;
+    width: 48%;
+}
+
+.featurescardwrapper {
+    height: inherit;
+}
+
+.featuresimage,
+.featurescaption {
+    height: 50%;
+}
+
+.featuresimage {
+    background-color: #fff;
+    margin-top: 15px;
 }
 
 @media screen and (max-width:1024px) {
