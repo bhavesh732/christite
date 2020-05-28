@@ -776,6 +776,15 @@ input {
     /* box-shadow: ; */
 }
 
+#featurescard1 .row {
+    height: 90%;
+}
+
+#featurescard1 h3:nth-child(2) {
+    height: fit-content;
+    margin: auto;
+}
+
 #about .vertalign {
     height: 100%;
     display: flex;
@@ -860,16 +869,25 @@ input {
     margin-bottom: 2%;
     background-color: #310e55;
     padding: 0px;
-    width: 48%;
+    width: 46%;
 }
 
 .featurescardwrapper {
-    height: inherit;
+    height: 100%;
+}
+
+.featurescaption p {
+    height: fit-content;
+    margin: auto;
+    color: white;
+    font-size: x-large;
+    letter-spacing: 1px;
 }
 
 .featuresimage,
 .featurescaption {
     height: 50%;
+    display: flex;
 }
 
 .featuresimage {
@@ -1089,5 +1107,16 @@ input {
     }
     nav ul li button:hover {
         box-shadow: none;
+    }
+    .featurescard {
+        height: 45%;
+        margin: 1%;
+        margin-bottom: 2%;
+        background-color: #310e55;
+        padding: 0px;
+        width: 100%;
+    }
+    .featurescaption p {
+        font-size: medium;
     }
 }
