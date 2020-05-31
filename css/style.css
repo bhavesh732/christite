@@ -1226,4 +1226,7 @@ input {
     .blogcards .col-sm-6 {
         margin: 2vh 0px !important;
     }
+    .container-fluid#blogs .blogcards .col-sm-6 h3 {
+        margin-top: 20px;
+    }
 }
