@@ -1200,6 +1200,9 @@ input {
 }
 
 @media screen and (max-width: 766px) {
+    .blogcards {
+        padding: 0px;
+    }
     .container-fluid#blogs {
         height: fit-content;
     }
@@ -1208,6 +1211,7 @@ input {
     }
     .container-fluid#blogs .row .col-sm-6 div {
         height: fit-content;
+        padding: 0px;
         margin-top: 7vh;
     }
     .container-fluid#blogs .row .col-sm-6:nth-child(2) {
