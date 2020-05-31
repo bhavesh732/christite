@@ -1120,3 +1120,43 @@ input {
         font-size: medium;
     }
 }
+
+
+/* blogss */
+
+.container#blogs * {
+    font-family: "Rubik";
+}
+
+.container#blogs {
+    height: 100vh;
+}
+
+.container#blogs .row .col-sm-6,
+.container#blogs .row {
+    height: inherit;
+}
+
+.container#blogs .row .col-sm-6 {
+    display: flex;
+}
+
+.container#blogs .row .col-sm-6 div {
+    height: fit-content;
+    margin: auto;
+}
+
+.container#blogs h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 3vw;
+    color: #310e55;
+    margin: 2vw;
+    height: fit-content;
+    display: block;
+}
+
+.container#blogs p {
+    display: block;
+    font-size: large;
+}
