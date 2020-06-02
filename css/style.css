@@ -647,7 +647,8 @@ svg {
     background-color: #310e55;
 }
 
-.logocontainer .flip-card-inner {
+.logocontainer .flip-card-inner,
+.carousel-inner .flip-card-inner {
     position: relative;
     text-align: center;
     transition: transform 1s;
@@ -659,7 +660,9 @@ svg {
 }
 
 .logocontainer .flip-card-front,
-.logocontainer .flip-card-back {
+.logocontainer .flip-card-back,
+.carousel-inner .flip-card-front,
+.carousel-inner .flip-card-back {
     width: 100%;
     height: 100%;
     left: 0;
@@ -667,11 +670,13 @@ svg {
     backface-visibility: hidden;
 }
 
-.logocontainer .flip-card-back {
+.logocontainer .flip-card-back,
+.carousel-inner .flip-card-back {
     position: absolute;
 }
 
-.logocontainer .flip-card-back {
+.logocontainer .flip-card-back,
+.carousel-inner .flip-card-back {
     background-color: #3aafa9;
     color: rgb(255, 255, 255);
     transform: rotateY(180deg);
@@ -1218,57 +1223,6 @@ input {
 }
 
 
-/* .blogcards .col-sm-6 {
-    box-shadow: 1px 1.75px #0c1b33;
-    transition: 1s ease-in-out;
-}
-
-.blogcards .col-sm-6:hover {
-    box-shadow: 4px 7px #0c1b33;
-    transition: 0.5s ease-in-out; }*/
-
-@media screen and (max-width: 766px) {
-    .blogcards {
-        padding: 0px;
-    }
-    .container-fluid#blogs {
-        height: fit-content;
-    }
-    .container-fluid#blogs h1 {
-        font-size: xx-large;
-    }
-    .container-fluid#blogs .row .col-sm-6 div {
-        height: fit-content;
-        padding: 0px;
-        margin-top: 7vh;
-    }
-    .container-fluid#blogs .row .col-sm-6:nth-child(2) {
-        height: 200vh;
-        width: 100%;
-    }
-    .container-fluid#blogs .flip-card {
-        width: 100%;
-        height: 25% !important;
-        padding: 2vh;
-    }
-    .blogcards .col-sm-6 {
-        margin: 2vh 0px !important;
-    }
-    .container-fluid#blogs .flip-card-front h3 {
-        margin-top: 20px;
-    }
-    .container-fluid#blogs .flip-card-front div {
-        margin: auto!important;
-        padding: 20px !important;
-    }
-    .container-fluid#blogs .flip-card-front,
-    .container-fluid#blogs .flip-card-back {
-        margin: 0px !important;
-        height: 100% !important;
-    }
-}
-
-
 /* flip card */
 
 .container-fluid#blogs .flip-card {
@@ -1335,10 +1289,77 @@ input {
 
 .container-fluid#blogs .flip-card-back .col-sm-6 {
     width: 50%;
-    height: 100%;
+    height: 100% !important;
+    margin: 0px !important;
+    padding: 0px;
+}
+
+.container-fluid#blogs .flip-card-back .col-sm-6 div {
+    margin-top: 0px !important;
+}
+
+.container-fluid#blogs .flip-card-back .col-sm-6 a button {
+    text-decoration: none;
+    border: none;
+    background-color: #310e55;
+    color: white;
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+}
+
+.container-fluid#blogs .flip-card-back .col-sm-6 img {
+    height: 80%;
+    width: 80%;
+    border: 2px solid #310e55;
+    border-radius: 200px;
+    margin: 10px;
 }
 
 .container-fluid#blogs .flip-card-front div {
     height: fit-content;
     margin: auto;
+}
+
+@media screen and (max-width: 766px) {
+    .blogcards {
+        padding: 0px;
+    }
+    .container-fluid#blogs {
+        height: fit-content;
+    }
+    .container-fluid#blogs h1 {
+        font-size: xx-large;
+    }
+    .container-fluid#blogs .row .col-sm-6 div {
+        height: fit-content;
+        padding: 0px;
+        margin-top: 7vh;
+    }
+    .container-fluid#blogs .row .col-sm-6:nth-child(2) {
+        height: 200vh;
+        width: 100%;
+    }
+    .container-fluid#blogs .flip-card {
+        width: 100%;
+        height: 25% !important;
+        padding: 2vh;
+    }
+    .blogcards .col-sm-6 {
+        margin: 2vh 0px !important;
+    }
+    .container-fluid#blogs .flip-card-front h3 {
+        margin-top: 20px;
+    }
+    .container-fluid#blogs .flip-card-front div {
+        margin: auto!important;
+        padding: 20px !important;
+    }
+    .container-fluid#blogs .flip-card-front,
+    .container-fluid#blogs .flip-card-back {
+        margin: 0px !important;
+        height: 100% !important;
+    }
+    .container-fluid#blogs .flip-card-back .col-sm-6 img {
+        margin: 30px 10px;
+    }
 }
