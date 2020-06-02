@@ -1292,10 +1292,16 @@ input {
     height: 100% !important;
     margin: 0px !important;
     padding: 0px;
+    display: flex !important;
+}
+
+.container-fluid#blogs .flip-card-back .col-sm-6:nth-child(1) div {
+    margin-top: 0px !important;
 }
 
 .container-fluid#blogs .flip-card-back .col-sm-6 div {
-    margin-top: 0px !important;
+    display: block;
+    margin: auto;
 }
 
 .container-fluid#blogs .flip-card-back .col-sm-6 a button {
@@ -1305,6 +1311,23 @@ input {
     color: white;
     padding: 10px;
     margin: 0px 10px 10px 10px;
+}
+
+.container-fluid#blogs .flip-card-back h4,
+.container-fluid#blogs .flip-card-back h5,
+.container-fluid#blogs .flip-card-back h6,
+.container-fluid#blogs .flip-card-back p {
+    margin: 5px;
+    color: #521a89;
+    font-weight: 700;
+}
+
+.container-fluid#blogs .flip-card-back p {
+    font-size: small;
+    text-align: center;
+    font-weight: 400;
+    margin: 5px 0px;
+    padding: 0px;
 }
 
 .container-fluid#blogs .flip-card-back .col-sm-6 img {
